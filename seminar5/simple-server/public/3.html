@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        const employees = [{
+            employeeName: 'john',
+            employeeSalary: 1000,
+            employeeAge: 40
+        },
+        {
+            employeeName: 'jane',
+            employeeSalary: 1050,
+            employeeAge: 30
+        }
+        ]
+        window.onload = () => {
+            const table = document.getElementById('employeeTable');
+            employees.forEach(emp => {
+                table.innerHTML += `<tr>
+                        <td>${emp.employeeName}</td>
+                        <td>${emp.employeeSalary}</td>
+                        <td>${emp.employeeAge}</td>
+                    </tr>
+                  `
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <table id="employeeTable"></table>
+</body>
+
+</html>

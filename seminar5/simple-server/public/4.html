@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        const employees = [{
+            employeeName: 'john',
+            employeeSalary: 1000,
+            employeeAge: 40
+        },
+        {
+            employeeName: 'jane',
+            employeeSalary: 1050,
+            employeeAge: 30
+        }
+        ]
+        window.onload = async () => {
+            try {
+                const response = await fetch('http://dummy.restapiexample.com/api/v1/employees');
+                const responseContent = await response.json();
+                const employees = responseContent.data;
+                console.log(responseContent);
+                const table = document.getElementById('employeeTable');
+                employees.forEach(emp => {
+                    table.innerHTML += `<tr>
+                        <td>${emp.employee_name}</td>
+                        <td>${emp.employee_salary}</td>
+                        <td>${emp.employee_age}</td>
+                    </tr>
+                  `
+                })
+            } catch (err) {
+                console.log(err);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <table id="employeeTable"></table>
+</body>
+
+</html>

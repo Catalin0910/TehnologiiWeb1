@@ -1,0 +1,39 @@
+#box {
+  height: 100px;
+  width: 100px;
+  border: 5px dashed lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: rectangle;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes rectangle {
+  from {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  25% {
+    margin-left: calc(100vw - 150px);
+    margin-top: 50px;
+  }
+
+  50% {
+    margin-left: calc(100vw - 150px);
+    margin-top: calc(100vh - 150px);
+  }
+
+  75% {
+    margin-left: 50px;
+    margin-top: calc(100vh - 150px);
+  }
+
+  to {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+}

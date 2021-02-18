@@ -1,0 +1,22 @@
+/* table,
+tr,
+td {
+  border: 1px solid black;
+}
+td:nth-child(odd) {
+  background-color: black;
+}
+
+td:nth-child(even) {
+  background-color: green;
+} */
+tr:nth-child(odd) td:nth-child(odd),
+tr:nth-child(even) td:nth-child(even) {
+  background-color: lightblue;
+  color: tomato;
+}
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+  background-color: tomato;
+  color: lightblue;
+}

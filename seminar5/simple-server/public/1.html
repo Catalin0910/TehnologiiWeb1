@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            window.onload =  () =>  {
+                const b0 = document.getElementById('b0');
+                const d0 = document.getElementById('d0');
+                b0.onclick = (evt) => {
+                    d0.innerHTML += `<div>click</div>`;
+                }
+            }   
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Click me" id='b0' />
+        <div id="d0"></div>
+    </body>
+</html>
